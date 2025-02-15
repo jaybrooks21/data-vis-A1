@@ -1,44 +1,214 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const ctx = document.getElementById('myChart');
-    if (ctx) {
-        new Chart(ctx, {
-            type: 'bar',
+    
+    // House Sales Chart
+    const houseSaleCtx = document.getElementById('houseSaleChart');
+    if (houseSaleCtx) {
+        new Chart(houseSaleCtx, {
+            type: 'line',
             data: {
-                labels: ['Revenues', 'Expenses'],
-                datasets: [{
-                    label: 'In Thousands',
-                    data: [444, 300],
-                    borderWidth: 1
-                } 
-            ]
+                labels: ['Mar 2023', 'Jul 2023', 'Dec 2023', 'Mar 2024', 'Jul 2024', 'Dec 2024'],
+                datasets: [
+                {
+                    label: 'BC',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'AB',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'SK',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'MB',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'ON',
+                    data: [881946, 856239, 853195, 889103, 867835, 834123],
+                    backgroundColor: 'rgba(104, 75, 192, 0.2)',
+                    borderWidth: 1,
+                    borderColor: 'rgba(44, 113, 113, 0.2)',
+
+                },
+                {
+                    label: 'QC',
+                    data: [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1,
+                    borderColor: 'black',
+
+                },
+                {
+                    label: 'NL',
+                    data: [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1,
+                    borderColor: 'black',
+
+                },
+                {
+                    label: 'PEI',
+                    data: [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1,
+                    borderColor: 'black',
+
+                },
+                {
+                    label: 'NB',
+                    data: [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1,
+                    borderColor: 'black',
+
+                },
+                {
+                    label: 'NS',
+                    data: [40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1,
+                    borderColor: 'black',
+
+                },
+
+
+                ]
             },
             options: {
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Sale Price (in thousands)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Date'
+                        }
                     }
                 }
             }
         });
     }
 
-    const lineCtx = document.getElementById('lineChart');
-    if (lineCtx) {
-        new Chart(lineCtx, {
-            type: 'line',
+    // Avg 2 Bed Rent Chart
+    const rentTwoBedCtx = document.getElementById('rentTwoBedChart');
+    if (rentTwoBedCtx) {
+        new Chart(rentTwoBedCtx, {
+            type: 'bar',
             data: {
                 labels: ['2008', '2009', '2010', '2011'],
                 datasets: [{
-                    label: 'Admissions',
+                    label: 'BC',
                     data: [100, 200, 300, 400],
-                    borderWidth: 1
-                }]
+                    backgroundColor: '#B5465D',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'AB',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: '#B5465D',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'SK',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: '#B5465D',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'AB',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: '#B5465D',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'AB',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: '#B5465D',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'AB',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: '#B5465D',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'AB',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: '#B5465D',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'AB',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: '#B5465D',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'AB',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: '#B5465D',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+                {
+                    label: 'AB',
+                    data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80],
+                    backgroundColor: '#B5465D',
+                    borderWidth: 1,
+                    borderColor: 'black',
+                },
+        
+                
+            ]
             },
+
             options: {
                 scales: {
                     y: {
-                        beginAtZero: true
-                    }
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Monthly Rent (in hundreds)'
+                        }
+                    },
+                    
                 }
             }
         });
@@ -131,5 +301,5 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-   
+
 });
