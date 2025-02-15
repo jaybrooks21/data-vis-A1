@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
         new Chart(rentTwoBedCtx, {
             type: 'bar',
             data: {
-                labels: ['2008', '2009', '2010', '2011'],
+                labels: ['BC', 'AB', 'SK', '2011'],
                 datasets: [{
                     label: 'BC',
                     data: [100, 200, 300, 400],
