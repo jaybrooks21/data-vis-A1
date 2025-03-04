@@ -6,9 +6,6 @@ footer {
     background-color: #f8f9fa;
 }
 
-.rectangle {
-    width: 500px;
-    height: 350px; /* Adjust the height as needed */
-    background-color: #f0f0f0; /* Adjust the color as needed */
-    border: 1px solid #ccc; /* Optional: Add a border */
+.img-fluid {
+    width: 100%;
 }
